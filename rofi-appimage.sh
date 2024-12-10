@@ -97,8 +97,10 @@ echo "Generating AppImage..."
 ./appimagetool --comp zstd \
 	--mksquashfs-opt -Xcompression-level --mksquashfs-opt 22 \
 	-n -u "$UPINFO" "$PWD"/AppDir "$PWD"/"$APP"-"$VERSION"-anylinux-"$ARCH".AppImage
+ls
 
 mv ./*.AppImage* ../
 cd ..
+ls
 rm -rf ./"$APP"
 echo "All Done!"
