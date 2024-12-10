@@ -94,7 +94,7 @@ cd ..
 wget -q "$APPIMAGETOOL" -O ./appimagetool
 chmod +x ./appimagetool
 echo "Generating AppImage..."
-./appimagetool --comp zstd \
+./appimagetool --verbose --comp zstd \
 	--mksquashfs-opt -Xcompression-level --mksquashfs-opt 22 \
 	-n -u "$UPINFO" "$PWD"/AppDir "$PWD"/"$APP"-"$VERSION"-anylinux-"$ARCH".AppImage
 ls
