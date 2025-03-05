@@ -9,7 +9,7 @@ export VERBOSE=1
 
 UPINFO="gh-releases-zsync|$(echo "$GITHUB_REPOSITORY" | tr '/' '|')|latest|*$ARCH.AppImage.zsync"
 LIB4BN="https://raw.githubusercontent.com/VHSgunzo/sharun/refs/heads/main/lib4bin"
-APPIMAGETOOL="https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage"
+APPIMAGETOOL="https://github.com/Samueru-sama/rofi-AppImage-test/raw/refs/heads/main/appimagetool-x86_64.AppImage"
 
 # CREATE DIRECTORIES
 mkdir -p ./"$APP/AppDir" 
