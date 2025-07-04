@@ -15,7 +15,7 @@ mkdir ./AppDir && (
 	# DOWNLOAD AND BUILD ROFI
 	git clone --depth 1 "https://github.com/davatorium/rofi.git" ./rofi && (
 		cd ./rofi
-		patch -p1 -i "$PATCH"
+		#patch -p1 -i "$PATCH"
 		meson --prefix /usr . build
 		meson compile -C build
 		meson install -C build --destdir "$(realpath ../)"
@@ -64,6 +64,15 @@ mkdir ./AppDir && (
 	
 	chmod a+x ./AppRun
 	./sharun -g
+
+	git clone https://github.com/xplshn/modEnv.git ./modenv && (
+		cd ./modenv
+		make
+		mv -v ./modEnv.so ../
+	)
+	mv -v ./modEnv.so ./shared/lib
+	echo 'modEnv.so' >> ./.preload
+	rm -rf ./modenv
 )
 
 export VERSION="$(./AppDir/AppRun -v | awk -F'[- ]' '{print $2; exit}')"
