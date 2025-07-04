@@ -7,7 +7,7 @@ SHARUN="https://github.com/VHSgunzo/sharun/releases/latest/download/sharun-$ARCH
 URUNTIME="https://github.com/VHSgunzo/uruntime/releases/latest/download/uruntime-appimage-dwarfs-$ARCH"
 URUNTIME_LITE="https://github.com/VHSgunzo/uruntime/releases/latest/download/uruntime-appimage-dwarfs-lite-$ARCH"
 UPINFO="gh-releases-zsync|$(echo "$GITHUB_REPOSITORY" | tr '/' '|')|latest|*$ARCH.AppImage.zsync"
-PATCH="$PWD"/hack.patch
+PATCH="$PWD"/locale-fix.patch
 
 # CREATE DIRECTORIES
 mkdir ./AppDir && (
